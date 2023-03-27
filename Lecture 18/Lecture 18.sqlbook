@@ -121,8 +121,11 @@ WITH (DELIMITER ',', FORMAT csv, HEADER MATCH);
 -- There are three options specified in WITH:
 -----  DELIMETER indicates values are comma separated ","
 -----  FORMAT indicates that this is a CSV
------  HEADER MATCH indicates that the first row contains column
------  names and should be ignored when importing.
+-----  HEADER MATCH indicates that the first row contains column names and should be ignored when importing.
+
+COPY us_congress_members
+FROM 'C:\Users\machr\Documents\GitHub\qtm151\Lecture 18\data\us_congress_members.csv'
+WITH (DELIMITER ',', FORMAT csv, HEADER MATCH);
 -- SQLBook: Markup
 <font size = "5">
 
